@@ -56,4 +56,6 @@ response = client.chat.completions.create(
     temperature=0,
 )
 
-print(json.dumps(json.loads(response.model_dump_json()), indent=4))
+print(response.choices[0].message.content)
+
+#print(json.dumps(json.loads(response.model_dump_json()), indent=4))
